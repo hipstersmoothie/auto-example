@@ -38,14 +38,6 @@ jobs:
           paths:
             - .
 
-  test:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/auto-example
-      - run:
-          name: Test
-          command: yarn test
 
   release:
     <<: *defaults
@@ -63,11 +55,7 @@ workflows:
     jobs:
       - install
 
-      - test:
-          requires:
-            - install
-
       - release:
           requires:
-            - test
+            - install
 
