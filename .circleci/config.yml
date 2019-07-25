@@ -38,14 +38,16 @@ jobs:
           paths:
             - .
 
-  test:
+
+  release:
     <<: *defaults
     steps:
       - attach_workspace:
           at: ~/auto-example
+      - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run:
-          name: Test
-          command: yarn test
+          name: Release
+          command: yarn run release
 
 workflows:
   version: 2
@@ -53,7 +55,7 @@ workflows:
     jobs:
       - install
 
-      - test:
+      - release:
           requires:
             - install
 
