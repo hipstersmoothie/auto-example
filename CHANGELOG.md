@@ -1,5 +1,11 @@
 # v0.0.1 (Thu Jul 25 2019)
 
+
+
+---
+
+# v0.0.1 (Thu Jul 25 2019)
+
 #### 🏠  Internal
 
 - add auto [#1](https://github.com/hipstersmoothie/auto-example/pull/1) ([@hipstersmoothie](https://github.com/hipstersmoothie))
