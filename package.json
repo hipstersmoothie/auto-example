@@ -2,7 +2,19 @@
   "name": "auto-example",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "Andrew Lisowski <lisowski54@gmail.com>",
+  "repository": "hipstersmoothie/auto-example",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "auto shipit"
+  },
+  "devDependencies": {
+    "@auto-it/git-tag": "^7.2.2",
+    "auto": "^7.2.2"
+  },
+  "auto": {
+    "plugins": [
+      "git-tag"
+    ]
   }
 }
